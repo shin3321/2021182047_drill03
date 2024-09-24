@@ -53,9 +53,23 @@ def run_rec():
       run_bottom()
       run_left()
 
+def tri_bottom():
+      pass
+def tri_right():
+      pass
+def tri_left():
+      pass
+
+def run_tri():
+      tri_bottom()
+      tri_right()
+      tri_left()
+      pass
+
 while True:
-      run_circle()
-      run_rec()
+      #run_circle()
+      #run_rec()
+      run_tri()
       break
 
 close_canvas()

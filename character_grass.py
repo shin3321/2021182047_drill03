@@ -54,18 +54,21 @@ def run_rec():
 
 
 def tri_bottom():
-      for x in range(100, 700,10):
+      print("tri_bottom")
+      for x in range(100, 700, 20):
             draw_boy(x, 90)
-      pass
 
 def tri_right():
-      pass
-
+      for y in range(90, 400, 20):
+            x = 700 - (y-90)
+            draw_boy(x, y)
+      
 def tri_left():
+      print("tri_left")
       pass
 
 def run_tri():
-      tri_bottom()
+      #tri_bottom()
       tri_right()
       tri_left()
       pass

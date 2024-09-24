@@ -10,7 +10,7 @@ def draw_boy(x, y):
       clear_canvas_now()
       grass.draw_now(400, 30)
       character.draw_now(x, y)
-      delay(0.1)
+      delay(0.01)
             
 def run_circle():
       r,cx,cy = 300, 800//2, 600//2
@@ -23,25 +23,25 @@ def run_circle():
 
 def run_top():
       print("run_top")
-      for x in range (0, 800, 10):
+      for x in range (0, 800, 20):
             draw_boy(x, 550)
       pass
 
 def run_right():
       print("run_right")
-      for y in range(550, 90, -10):
+      for y in range(550, 90, -20):
             draw_boy(790, y)
       pass
 
 def run_bottom():
       print("run_bottom")
-      for x in range (800, 0, -10):
+      for x in range (800, 0, -20):
             draw_boy(x, 0)
       pass
 
 def run_left():
       print("run_left")
-      for y in range(90, 790, 10):
+      for y in range(90, 790, 20):
             draw_boy(0, y)
       pass
 
@@ -65,18 +65,20 @@ def tri_right():
       
 def tri_left():
       print("tri_left")
-      pass
+      for y in range (400, 90, -20):
+            x = y
+            draw_boy(x, y)
 
 def run_tri():
-      #tri_bottom()
+      tri_bottom()
       tri_right()
       tri_left()
       pass
 
 while True:
-      #run_circle()
-      #run_rec()
+      run_circle()
+      run_rec()
       run_tri()
-      break
+ 
 
 close_canvas()

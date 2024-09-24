@@ -8,6 +8,7 @@ character = load_image('character.png')
 
 def draw_boy(x, y):
       clear_canvas_now()
+      grass.draw_now(400, 30)
       character.draw_now(x, y)
       delay(0.1)
             
@@ -28,7 +29,7 @@ def run_top():
 
 def run_right():
       print("run_right")
-      for y in range(550, 0, -10):
+      for y in range(550, 90, -10):
             draw_boy(790, y)
       pass
 
@@ -40,12 +41,10 @@ def run_bottom():
 
 def run_left():
       print("run_left")
-      for y in range(0, 790, 10):
+      for y in range(90, 790, 10):
             draw_boy(0, y)
       pass
 
-
-      
 def run_rec():
       print("run_rec")
       run_top()
@@ -53,10 +52,15 @@ def run_rec():
       run_bottom()
       run_left()
 
+
 def tri_bottom():
+      for x in range(100, 700,10):
+            draw_boy(x, 90)
       pass
+
 def tri_right():
       pass
+
 def tri_left():
       pass
 

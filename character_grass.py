@@ -24,12 +24,12 @@ def run_top():
       print("run_top")
       for x in range (0, 800, 10):
             draw_boy(x, 550)
-
-      
       pass
 
 def run_right():
       print("run_right")
+      for y in range(550, 0, -10):
+            draw_boy(790, y)
       pass
 
 def run_bottom():
@@ -44,13 +44,13 @@ def run_left():
       
 def run_rec():
       print("run_rec")
-      run_top()
+      #run_top()
       run_right()
       run_bottom()
       run_left()
 
 while True:
-      run_circle()
+      #run_circle()
       run_rec()
       break
 
